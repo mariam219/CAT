@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int base, exponent;
+    long long res = 1;
+    printf("Enter base and exponent: ");
+    scanf("%d %d", &base, &exponent);
+    for(int i=1;i<=exponent;i++)
+    {
+        res*=base;
+    }
+
+    printf("%d raised to power %d = %lld\n", base, exponent, res);
+
+    return 0;
+}

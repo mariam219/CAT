@@ -1,0 +1,18 @@
+#include <stdio.h>
+int is_nth_bit_set(int number, int n) {
+    return (number & (1 << n)) != 0;
+}
+
+int main() {
+    int number, n;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    printf("Enter the bit position to check (0-based index): ");
+    scanf("%d", &n);
+    if (is_nth_bit_set(number, n)) {
+        printf("The %dth bit of %d is set (1).\n", n, number);
+    } else {
+        printf("The %dth bit of %d is not set (0).\n", n, number);
+    }
+    return 0;
+}
